@@ -55,14 +55,10 @@ public class Ejercicio1 {
         }
     }
 
-
     public WebDriver getDriver(String URL){
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(URL);
         return driver;
     }
-
-
-
 }
