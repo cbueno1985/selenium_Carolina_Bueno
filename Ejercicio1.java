@@ -10,7 +10,6 @@ public class Ejercicio1 {
 
     @Test
     public void Ejercicio1(){
-
         //Acceder a Netflix: https://www.netflix.com/uy/
         WebDriver driver = getDriver("https://www.netflix.com/uy/");
         //Mostrar los elementos h1 y h2 que hay en el sitio
