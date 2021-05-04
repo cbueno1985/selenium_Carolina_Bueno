@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class SpotifyWithCssSelectorTest {
 
     @Test
@@ -28,17 +30,20 @@ public class SpotifyWithCssSelectorTest {
         driver.findElement(By.cssSelector("input[placeholder='AAAA']")).sendKeys("1978");
 
         //Sexo
-        driver.findElement(By.cssSelector("#__next > main > div.encore-light-theme > div > form > fieldset > div > div:nth-child(2) > label > span.Indicator-sc-16vj7o8-0.iBjMfh")).click();
+        driver.findElement(By.xpath("//*[contains(text(), 'Mujer' )]")).click();
 
-        driver.findElement(By.cssSelector("#__next > main > div.encore-light-theme > div > form > div:nth-child(8) > div > label > span.Indicator-sc-11vkltc-0.ioJObh")).click();
+
+        driver.findElement(By.xpath("//*[contains(text(), 'Prefiero no recibir' )]")).click();
+
+        driver.findElement(By.xpath("//*[contains(text(), 'Compartir mis datos de ' )]")).click();
 
         //Botón Registro
-        driver.findElement(By.cssSelector("#__next > main > div.encore-light-theme > div > form > div.EmailForm__Center-jwtojv-0.eaexVT > div > button > div.ButtonInner-peijbp-0.hlHQCm.encore-bright-accent-set.SignupButton___StyledButtonPrimary-cjcq5h-1.gzFCtx")).click();
+        driver.findElement(By.cssSelector("button[type='submit']")).click();
 
     }
 
     public WebDriver getDriver(String URL){
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","drivers/chromedriverAnt.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(URL);
         return driver;
