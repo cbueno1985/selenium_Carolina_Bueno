@@ -38,7 +38,6 @@ public class ClaseLoginFailureTest {
         Assert.assertTrue(error.getText().contains(errorEsperado));
 
     }
-
     @AfterTest
     public void afterTestNotation() throws InterruptedException {
         Thread.sleep(2000);
